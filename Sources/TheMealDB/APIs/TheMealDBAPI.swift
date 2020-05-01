@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct TheMealDBAPI {
+enum TheMealDBAPI {
     enum DecodingError: LocalizedError {
         case codingKeyNotFound(String)
         
