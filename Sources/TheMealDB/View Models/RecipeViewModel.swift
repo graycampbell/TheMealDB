@@ -42,7 +42,6 @@ extension RecipeViewModel {
             .dataTaskPublisher(for: url)
             .map(\.data)
             .decode(type: RecipesJSONResponse.self, decoder: JSONDecoder())
-            .eraseToAnyPublisher()
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: self.receiveCompletion(_:), receiveValue: self.receiveValue(_:))
     }
