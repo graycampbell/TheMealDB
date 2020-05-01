@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,14 @@
 		E23C9CF4245B9EBF00EBD87A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23C9CED245B9EBF00EBD87A /* AppDelegate.swift */; };
 		E23C9CF5245B9EBF00EBD87A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23C9CEE245B9EBF00EBD87A /* ContentView.swift */; };
 		E23C9CF7245B9EBF00EBD87A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23C9CF0245B9EBF00EBD87A /* SceneDelegate.swift */; };
+		E23C9CFD245B9FA700EBD87A /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23C9CFC245B9FA700EBD87A /* Category.swift */; };
+		E23C9CFF245B9FB200EBD87A /* CategoryJSONResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23C9CFE245B9FB200EBD87A /* CategoryJSONResponse.swift */; };
+		E23C9D04245B9FD700EBD87A /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23C9D03245B9FD700EBD87A /* CategoriesView.swift */; };
+		E23C9D06245B9FDF00EBD87A /* CategoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23C9D05245B9FDF00EBD87A /* CategoryRow.swift */; };
+		E23C9D08245B9FF600EBD87A /* JSONResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23C9D07245B9FF600EBD87A /* JSONResponse.swift */; };
+		E23C9D0B245BA04300EBD87A /* TheMealDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23C9D0A245BA04300EBD87A /* TheMealDB.swift */; };
+		E23C9D0D245BA06900EBD87A /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23C9D0C245BA06900EBD87A /* CategoriesViewModel.swift */; };
+		E23C9D10245BA0C900EBD87A /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = E23C9D0F245BA0C900EBD87A /* KingfisherSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +32,13 @@
 		E23C9CEE245B9EBF00EBD87A /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E23C9CEF245B9EBF00EBD87A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E23C9CF0245B9EBF00EBD87A /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		E23C9CFC245B9FA700EBD87A /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		E23C9CFE245B9FB200EBD87A /* CategoryJSONResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryJSONResponse.swift; sourceTree = "<group>"; };
+		E23C9D03245B9FD700EBD87A /* CategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
+		E23C9D05245B9FDF00EBD87A /* CategoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRow.swift; sourceTree = "<group>"; };
+		E23C9D07245B9FF600EBD87A /* JSONResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONResponse.swift; sourceTree = "<group>"; };
+		E23C9D0A245BA04300EBD87A /* TheMealDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheMealDB.swift; sourceTree = "<group>"; };
+		E23C9D0C245BA06900EBD87A /* CategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E23C9D10245BA0C900EBD87A /* KingfisherSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,8 +73,12 @@
 			isa = PBXGroup;
 			children = (
 				E23C9CED245B9EBF00EBD87A /* AppDelegate.swift */,
-				E23C9CEE245B9EBF00EBD87A /* ContentView.swift */,
 				E23C9CF0245B9EBF00EBD87A /* SceneDelegate.swift */,
+				E23C9CEE245B9EBF00EBD87A /* ContentView.swift */,
+				E23C9CFA245B9F7C00EBD87A /* Models */,
+				E23C9CF8245B9F6C00EBD87A /* Views */,
+				E23C9CF9245B9F7200EBD87A /* View Models */,
+				E23C9D09245BA02E00EBD87A /* APIs */,
 				E23C9CEB245B9EBF00EBD87A /* LaunchScreen.storyboard */,
 				E23C9CE8245B9EBF00EBD87A /* Assets.xcassets */,
 				E23C9CE9245B9EBF00EBD87A /* Preview Content */,
@@ -74,6 +94,57 @@
 				E23C9CEA245B9EBF00EBD87A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E23C9CF8245B9F6C00EBD87A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E23C9D00245B9FC000EBD87A /* Categories */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E23C9CF9245B9F7200EBD87A /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				E23C9D0C245BA06900EBD87A /* CategoriesViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		E23C9CFA245B9F7C00EBD87A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E23C9D07245B9FF600EBD87A /* JSONResponse.swift */,
+				E23C9CFB245B9F9D00EBD87A /* Category */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E23C9CFB245B9F9D00EBD87A /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				E23C9CFC245B9FA700EBD87A /* Category.swift */,
+				E23C9CFE245B9FB200EBD87A /* CategoryJSONResponse.swift */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		E23C9D00245B9FC000EBD87A /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				E23C9D03245B9FD700EBD87A /* CategoriesView.swift */,
+				E23C9D05245B9FDF00EBD87A /* CategoryRow.swift */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		E23C9D09245BA02E00EBD87A /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				E23C9D0A245BA04300EBD87A /* TheMealDB.swift */,
+			);
+			path = APIs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -92,6 +163,9 @@
 			dependencies = (
 			);
 			name = TheMealDB;
+			packageProductDependencies = (
+				E23C9D0F245BA0C900EBD87A /* KingfisherSwiftUI */,
+			);
 			productName = TheMealDB;
 			productReference = E23C9CD0245B9E8E00EBD87A /* TheMealDB.app */;
 			productType = "com.apple.product-type.application";
@@ -120,6 +194,9 @@
 				Base,
 			);
 			mainGroup = E23C9CC7245B9E8E00EBD87A;
+			packageReferences = (
+				E23C9D0E245BA0C900EBD87A /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = E23C9CD1245B9E8E00EBD87A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -149,7 +226,14 @@
 			files = (
 				E23C9CF5245B9EBF00EBD87A /* ContentView.swift in Sources */,
 				E23C9CF4245B9EBF00EBD87A /* AppDelegate.swift in Sources */,
+				E23C9D0D245BA06900EBD87A /* CategoriesViewModel.swift in Sources */,
+				E23C9D04245B9FD700EBD87A /* CategoriesView.swift in Sources */,
+				E23C9D0B245BA04300EBD87A /* TheMealDB.swift in Sources */,
+				E23C9CFF245B9FB200EBD87A /* CategoryJSONResponse.swift in Sources */,
+				E23C9D06245B9FDF00EBD87A /* CategoryRow.swift in Sources */,
 				E23C9CF7245B9EBF00EBD87A /* SceneDelegate.swift in Sources */,
+				E23C9D08245B9FF600EBD87A /* JSONResponse.swift in Sources */,
+				E23C9CFD245B9FA700EBD87A /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +427,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E23C9D0E245BA0C900EBD87A /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.13.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E23C9D0F245BA0C900EBD87A /* KingfisherSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E23C9D0E245BA0C900EBD87A /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = KingfisherSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E23C9CC8245B9E8E00EBD87A /* Project object */;
 }
