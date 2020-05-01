@@ -8,7 +8,7 @@
 
 import Foundation
 
-// MARK: Coding Keys & Properties
+// MARK: Coding Keys, Properties, & Initializers
 
 struct Recipe: Decodable, Identifiable {
     
@@ -86,6 +86,8 @@ struct Recipe: Decodable, Identifiable {
     var videoURL: URL? {
         return URL(string: self.videoURLString)
     }
+    
+    // MARK: Initializers
     
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
