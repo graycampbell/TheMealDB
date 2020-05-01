@@ -10,7 +10,7 @@ import Foundation
 
 enum TheMealDB {
     enum Endpoint: String {
-        case categories
+        case categories, filter
         
         var path: String {
             return "/api/json/v1/1/" + self.rawValue.lowercased() + ".php"

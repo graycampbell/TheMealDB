@@ -7,20 +7,13 @@
 //
 
 import SwiftUI
-import KingfisherSwiftUI
 
 struct CategoryRow: View {
     var category: Category
     
     var body: some View {
-        HStack {
-            KFImage(self.category.imageURL)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 80, height: 80)
-                .padding(.trailing, 10)
-            Text(self.category.name)
-                .bold()
+        NavigationLink(destination: MealsView(category: self.category)) {
+            ThumbnailRow(imageURL: self.category.imageURL, title: self.category.name)
         }
     }
 }
