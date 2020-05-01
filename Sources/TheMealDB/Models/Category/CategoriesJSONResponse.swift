@@ -1,5 +1,5 @@
 //
-//  CategoryJSONResponse.swift
+//  CategoriesJSONResponse.swift
 //  TheMealDB
 //
 //  Created by Gray Campbell on 4/30/20.
