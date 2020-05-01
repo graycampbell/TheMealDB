@@ -14,12 +14,12 @@ struct ThumbnailRow: View {
     let title: String
     
     var body: some View {
-        HStack {
+        HStack(spacing: 15) {
             KFImage(self.imageURL)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 80, height: 80)
-                .padding(.trailing, 10)
+                .cornerRadius(15)
             Text(self.title)
                 .bold()
         }

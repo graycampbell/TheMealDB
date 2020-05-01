@@ -36,7 +36,7 @@ extension MealsViewModel {
     private func fetchMeals() {
         let query = "c=\(self.category.name)"
         
-        guard let url = TheMealDB.url(for: .filter, query: query) else { return }
+        guard let url = TheMealDBAPI.url(.filter, query: query) else { return }
         
         self.cancellable = URLSession.shared
             .dataTaskPublisher(for: url)

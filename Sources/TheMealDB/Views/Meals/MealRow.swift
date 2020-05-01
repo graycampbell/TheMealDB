@@ -12,7 +12,7 @@ struct MealRow: View {
     var meal: Meal
     
     var body: some View {
-        HStack {
+        NavigationLink(destination: RecipeView(meal: self.meal)) {
             ThumbnailRow(imageURL: self.meal.imageURL, title: self.meal.name)
         }
     }

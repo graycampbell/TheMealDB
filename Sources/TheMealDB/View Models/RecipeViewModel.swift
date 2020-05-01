@@ -1,5 +1,5 @@
 //
-//  CategoriesViewModel.swift
+//  RecipeViewModel.swift
 //  TheMealDB
 //
 //  Created by Gray Campbell on 4/30/20.
@@ -11,31 +11,37 @@ import Foundation
 
 // MARK: Properties & Initializers
 
-class CategoriesViewModel: ObservableObject {
+class RecipeViewModel: ObservableObject {
     
     // MARK: Properties
     
-    @Published var categories: [Category] = []
+    @Published var recipe: Recipe?
     
     var cancellable: AnyCancellable?
     
+    let meal: Meal
+    
     // MARK: Initializers
     
-    init() {
-        self.fetchCategories()
+    init(meal: Meal) {
+        self.meal = meal
+        
+        self.fetchRecipe()
     }
 }
 
 // MARK: - Fetching
 
-extension CategoriesViewModel {
-    private func fetchCategories() {
-        guard let url = TheMealDBAPI.url(.categories) else { return }
+extension RecipeViewModel {
+    private func fetchRecipe() {
+        let query = "i=\(self.meal.id)"
+        
+        guard let url = TheMealDBAPI.url(.lookup, query: query) else { return }
         
         self.cancellable = URLSession.shared
             .dataTaskPublisher(for: url)
             .map(\.data)
-            .decode(type: CategoriesJSONResponse.self, decoder: JSONDecoder())
+            .decode(type: RecipesJSONResponse.self, decoder: JSONDecoder())
             .eraseToAnyPublisher()
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: self.receiveCompletion(_:), receiveValue: self.receiveValue(_:))
@@ -45,7 +51,7 @@ extension CategoriesViewModel {
         
     }
     
-    private func receiveValue(_ value: CategoriesJSONResponse) {
-        self.categories = value.array
+    private func receiveValue(_ value: RecipesJSONResponse) {
+        self.recipe = value.array.first
     }
 }
